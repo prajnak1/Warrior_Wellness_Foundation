@@ -14,7 +14,6 @@ body, html {
 }
 
 header {
-  background-color: #f4f4f4;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -23,13 +22,31 @@ header {
 
 .navbar a {
   text-decoration: none;
-  color: #333;
+  color: darkgreen;
   margin: 0 10px;
-  font-weight: bold;
+  font-size: 20px;
+  align-items: right;
 }
 
 .navbar img.logo {
-  height: 50px;
+  height: 25px;
+}
+  
+nav, .nav-links {
+    display: flex;
+    
+}
+
+nav {
+    justify-content: space-around;
+    align-items: right;
+    height: 17vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
 }
 
 .heading-container {
