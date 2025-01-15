@@ -1,449 +1,323 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Quicksand:wght@300..700&display=swap');
 
-*{
-  font-family: "Quicksand", sans-serif;
-   padding:0;
-   margin:0;
+.hide-mobile{
+  display: none;
 }
+
+
 body{
-  line-height:1.4;
-  
-}
-h1{
-  font-size:50px;
-}
-img{
-  width:50%;
+
+
+  background-color:#F1EAFF;
+  margin: 0;
+ 
+  h1{
+      font-family: 'Platypi';
+  }
+  p{
+      font-family: 'Inter';
+      font-weight: 400;
+  }
 }
 
-.container{
-  max-width:1320px;
-  margin: 0 auto;
-  padding: 0 1.2rem;
+.wrap{
+  margin: 4em;
 }
+
+
 header{
-  min-height: 100vhl;
-  display: flex;
-  justify-content: stretch;
-}
-
-.navbar{
-  background: darkgreen;
-  padding:1.2rem;
-  width:100%;
-}
-
-.navbar-nav{
-  padding:0.2rem 3rem 0.2rem 3rem;
-  text-align: center;
-}
-
-.navbar-nav a{
-  text-transform: uppercase;
-  font-family: var(--Roboto);
-  
-  font-weight:500;
-  color: white;
-  text-decoration: none;
-  display:inline-block;
-  padding: 0.4rem 3rem;
-  letter-spacing: 3px;
-}
-.navbar-nav a:hover{
-  opacity: 0.7;
-}
-.banner{
-  flex:1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+
+nav a {
+  text-decoration: none;
   color: darkgreen;
+  margin: 0 10px;
+  font-size: 20px;
+  align-items: right;
 }
-.banner-title{
-  font-size:3rem;
-  line-height: 1.2;
+nav ul{
+  font-family: "Quicksand", sans-serif;
+  color: darkgreen;
+  background-color: white;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  height: 50vh;
+  margin: 0;
+  list-style: none;
+  width: 40%;
+  text-align: right;
+  padding: 2em;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+  text-decoration: none;
+  li{
+      margin: 2em 0;
+      display: flex;
+      &:nth-of-type(1){
+          margin-bottom: 4em;
+      }
+
+
+      a {
+         
+          color: darkgreen;
+          align-items: center;
+          text-decoration: none;
+          gap: 10px;
+          font-size: 1rem;
+          img{
+              position:absolute;
+              width: 40px;
+              transform: translateX(-110%);
+
+
+          }
+
+
+          &:hover{
+              color: orange;
+              text-decoration: underline;
+          }
+      }
+  }
 }
-.banner p{
-  padding: 1rem 0 2 rem 0;
-  font-size: 1.2rem;
-  font-weight: 300;
-  word-spacing: 2px;
-
-}
 
 
-/*
-.navbar{
-    overflow: hidden;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   
-    margin: 0;
-    color:green;
-    margin-left:-10px;
-    margin-right: -10px;
-    margin-top: -10px;
-  
+.open {
+  transform: translate(0%);
  
-    
-  }
-  .logo{
-    width:5%;
-    margin-left:10px;
-    margin-top: 5px;
-  }
-    /*
-  /* Add a red background color to navbar links on hover */
-  /*
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #FF7F50;
-    
-   
-    
-  }
-    
-  .shop_now{
-    border: 5px solid green;
-    background: none;
-    padding: 10px 20px;
-    font-size: 30px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    cursor: pointer;
-    margin-top: 150px;
-    margin-left: 200px;
-    
-    transition: 0.8s;
-    position: relative;
-    border-radius: 100%;
-    overflow: hidden;
-  }
-  .shop_now:hover{
-    color: orange;
-  }
-  /* Links inside the navbar */
-  /*
-  .navbar a {
-    font-size: 25px;
-    color:darkgreen;
-    text-align: center;
-    padding: 1px 20px;
-    text-decoration: none;
-    margin-left: 75px;
-   float:center;
-   font-weight: bold;
-   
-  }
-  
-  /* The dropdown container */
-  /*
-  .dropdown {
-    float: right;
-    overflow: hidden;
-  }
-  
-  /* Dropdown button */
-  /*
-  .dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    
-    background-color: inherit;
-    font-family: inherit; 
-    margin: 0; 
-  }
+}
 
-  
-  
-  
-  /* Dropdown content (hidden by default) */
-  /*
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: mediumpurple;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px lightblue;
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  /*
-  .dropdown-content a {
-    float: none;
-    position: absolute;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-  }
-  
-  /* Add a grey background color to dropdown links on hover */
-  /*
-  .dropdown-content a:hover {
-    background-color: lightblue;
-  }
-  
-  /* Show the dropdown menu on hover */
-  /*
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  */
-  /*
-  .logo-image{
-   width:115%;
-   height:750px;
-   margin-top:0px;
-   margin-left:-20px;
-   margin-right:500px;
-   opacity: 0.2;
-    
-  }
 
-  */
+h1, p{
+  text-align: center;
+ 
+
+ 
+}
+h1{
+  margin-top: 3rem;
+  color:#FF914D;
+  font-weight: 900;
+ 
+  img {
+      display: block;
+      /*auto keeps centered always*/
+      margin: 0 auto;
   
-  
-  /*
-  .bottom-right {
-    position: absolute;
-    bottom: 45%;
-    left:20%;
-    right:20%;
-    color:darkgreen;
-    font-size:30px;
-    
-    text-align: center;
-    
   }
-  
+}
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: green;
+  font-weight: 200;
+}
+.impact-section {
+  width: 100%;               /* Full page width */
+  display: flex;             /* Use Flexbox */
+  justify-content: center;   /* Center horizontally */
+  margin-top: 40px;          /* Space from above content */
+}
+
+.part2 {
+  text-align: center;
+  margin-left:250px;
+  width: 100%;    
+               /* Optional: Adjust width */
+         /* Optional: Limit max width */
+  font-weight: 400;
+}
+
+
+
+.primary-cta {
+  background: #FF914D;
+  /*space inside is padding*/
+  padding: 1em;
+  width: 100%;
+  left: 100%;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: white;
+  border-radius: .3em;
+  font-family: 'Inter';
+}
+
+
+.header-left{
+  position: relative;
+
+  width: 500px;
+  img{
+     position: absolute;
+      width: 18%;
+      left: 0%;
+     
+  }
+ 
+}
+
+
+.menu-open{
+  position: absolute;
+  height: 400px;
+  width: 400px;
+ top: 10%;
+ left: 80%;
+}
+
+
+
+
+.cat{
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  margin-top: 3em;
+
+
+  img {
+  position: absolute;
+  width: 70%;
+
+  left: 50%;
+  transform: translateX(-50%);
+     
+  }
+}
+
+
+.part {
+  position: absolute;
+  bottom: 40%;
+  max-width: 100%;
+}
+
+
+@media (min-width: 750px){
+  .wrap {
+      margin: 0 4em;
+  }
+  .hide-desktop{
+      display: none;
+  }
+  .hide-mobile{
+      display: block;
+  }
+  .header-left{
+      /*aligns vertically*/
+      display: flex;
+      img{
+          transform: translateY(70%);
+      }
+  }
 
 .impact-heading{
-  font-size: 60px;
-  text-align: center;
+  font-family: "Quicksand", sans-serif;
   color: darkgreen;
-
 }
-*/
-
-/*
-  .subheading{
-    position: absolute;
-    left:10%;
-    right:10%;
-    color:darkgreen;
-    font-size:30px;
-    color:darkorange;
-    text-align: center;
+ .part{
+    
+      h1{
+         font-size: 3rem;
+      }
+  position: absolute;
+  height: 30%;
+  .divider{
+     position: relative;
+     
+      height:2px;
+      width: 600px;
+      border-top: 5px solid green;
+      padding: 4;
+      margin-right: 0;
+      margin-bottom: 2em;
   }
+ }
+ nav ul{
+  position: absolute;
+  background: none;
+  display: flex;
+  gap: 4em;
+ 
+  width: 50%;
+  transform: translateX(0%);
 
- .line{
-  width: 300px;
-  height:4px;
-  background:darkgreen;
-  margin: 10px auto;
+
+    
+     
+ 
+ }
+  main {
+  width: 70%;
+ 
+  margin-left: 4rem;
  }
 
-  .initial-para{
-    position: absolute;
-    text-align: justify;
-    
-    
-  
-   font-size: 18px;
-   
-    
-  }
-
-  .btn{
-    background:darkgreen;
-    border-radius:500px;
-    color:white;
-    font-size:30px;
-    
-    border-color:green;
-    margin:30px auto;
-    cursor: pointer;
-    
-  }
-
-  .btn a{
-    text-decoration: none;
-  }
-.btn a:visited{
-  color:white;
-  text-decoration: none;
-}  
-*/
-/*
-  .impact-heading{
-    position: absolute;
-    bottom: -13%;
-    left:46%;
-    right:40%;
-    text-align: center;
-    font-size:30px;
-    display:flex;
-    
-  }
-
-  .child--1{
-    position: absolute;
-    bottom: -50%;
-    left: 10%;
-    width: 300px;
-    height:300px;
-    background-color:darkorange;
-    border-radius: 30px;
-    text-align: center;
-   color:darkgreen;
-   margin-left: 10px;
-   margin-right: 10px;
-  }
+ .cat-container{
+      position: absolute;
+      z-index: -1;
+      width: 90%;
+      top: -30%;
+      left: 80%;
+ }
+}
 
 
-.child--2{
-    position: absolute;
-    bottom: -15%;
-    left: 40%;
-    bottom: -50%;
-    width: 300px;
-    height:300px;
-    background-color:darkorange;
-    border-radius: 30px;
-    text-align: center;
-   color:darkgreen;
-   margin-left: 10px;
-   margin-right: 10px;
-  }
 
-  .child--3{
-    position: absolute;
-    bottom: -15%;
-    left: 70%;
-    bottom: -50%;
-    width: 300px;
-    height:300px;
-    background-color:darkorange;
-    border-radius: 30px;
-    text-align: center;
-   color:darkgreen;
-   margin-left: 10px;
-   margin-right: 10px;
-  }
+.container {
+  display: flex;
+  gap: 200px;
+  width: 100%;
+  bottom: 0%;
+}
 
-  .footer {
-    position: absolute;
-    bottom:-80%;
-    width: 100%;
-    background: darkgreen;
-    min-height: 10px;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   
-  }
-  
-  .social-icon,
-  .menu {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
-  }
-  
-  .social-icon__item,
-  .menu__item {
-    list-style: none;
-  }
-  
-  .social-icon__link {
-    font-size: 2rem;
-    color: #fff;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
-  }
-  .social-icon__link:hover {
-    transform: translateY(-10px);
-  }
-  
-  .menu__link {
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
-    text-decoration: none;
-    opacity: 0.75;
-    font-weight: 300;
-  }
-  
-  .menu__link:hover {
-    opacity: 1;
-  }
-  
-  .footer p {
-    color: #fff;
-    margin: 15px 0 10px 0;
-    font-size: 1rem;
-    font-weight: 300;
-  }
-  
-  
-  
-  .wave#wave1 {
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animateWaves 4s linear infinite;
-  }
-  
-  .wave#wave2 {
-    z-index: 999;
-    opacity: 0.5;
-    bottom: 10px;
-    animation: animate 4s linear infinite !important;
-  }
-  
-  .wave#wave3 {
-    z-index: 1000;
-    opacity: 0.2;
-    bottom: 15px;
-    animation: animateWaves 3s linear infinite;
-  }
-  
-  .wave#wave4 {
-    z-index: 999;
-    opacity: 0.7;
-    bottom: 20px;
-    animation: animate 3s linear infinite;
-  }
-  
-  @keyframes animateWaves {
-    0% {
-      background-position-x: 1000px;
-    }
-    100% {
-      background-positon-x: 0px;
-    }
-  }
-  
-  @keyframes animate {
-    0% {
-      background-position-x: -1000px;
-    }
-    100% {
-      background-positon-x: 0px;
-    }
-  }
+.box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+}
 
-  */
+/* Green box with orange shadow */
+.green-box {
+  background-color: darkgreen; /* Green color */
+}
+
+.green-box .shadow {
+  background-color: #ff914d; /* Orange shadow */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+/* Orange box with green shadow */
+.orange-box {
+  background-color: #ff914d; /* Orange color */
+}
+
+.orange-box .shadow {
+  background-color: darkgreen; /* Green shadow */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  z-index: -1;
+}
